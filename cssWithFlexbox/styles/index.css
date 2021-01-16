@@ -1,0 +1,91 @@
+
+
+* {
+  box-sizing: border-box; 
+  /*The box sizing property specifies how the total width and height of all elements in the html or 
+  selectors in the css are calculated. Read more here: https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing*/
+}
+
+/*Specifies the font-family that should be used in the html*/
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Montserrat', sans-serif;
+  /* font-family: 'Open Sans', sans-serif; */
+}
+
+/*Allow image to get it size from the parent component*/
+img{
+  max-width: 100%;
+  max-height: 100%;
+  display: block; /* remove extra space below image */
+}
+.img_container{
+ padding: 10px;
+ width: 100%;
+}
+.logo {
+  font-family: 'Pacifico', cursive;
+  text-align: center;
+}
+
+.nav {
+  display: flex;
+  list-style-type: none;
+  padding: 10px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.nav li a {
+  color: black;
+  text-decoration: none;
+}
+.nav li a:hover:not(.active) {
+  background-color: #111;
+  color: white;
+}
+
+.about p, a{
+ padding: 15px; /*Adds padding around the about me content*/
+ color: black;
+}
+
+.about a:hover{
+font-size: 30px;
+}
+.about_header{
+ text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-flow: column wrap; 
+  justify-content: space-between;
+}
+
+.about{
+  flex-basis: 35%;
+}
+.section_container {
+  display: flex; 
+  flex-flow: column wrap; 
+  justify-content: space-around; 
+}
+
+
+/*For tabs and desktop screens*/
+@media only screen and (min-width: 768px) {
+  .container {
+    flex-flow: row wrap; 
+  }
+  .logo {
+    padding-left: 10px; /* Similar to col having a padding of 5px */
+  }
+  .section_container {
+    display: flex; 
+    flex-flow: row wrap; 
+    justify-content: space-around; 
+  }
+  .img_container{
+    padding: 10px;
+    width: 65%;
+   }
+}

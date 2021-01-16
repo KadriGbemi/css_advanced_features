@@ -1,0 +1,134 @@
+
+
+* {
+  box-sizing: border-box; 
+  /*The box sizing property specifies how the total width and height of all elements in the html or 
+  selectors in the css are calculated. Read more here: https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing*/
+}
+
+/*Specifies the font-family that should be used in the html*/
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Montserrat', sans-serif;
+  /* font-family: 'Open Sans', sans-serif; */
+}
+
+.logo_container {
+  padding-left: 10px; /* Similar to col having a padding of 5px */
+}
+.logo {
+  font-family: 'Pacifico', cursive;
+  text-align: center;
+}
+
+.img_container{
+  padding: 10px;
+ }
+
+.nav {
+  list-style-type: none;
+  padding-top: 12px; /* Similar to col having a padding of 5px */
+  font-family: 'Open Sans', sans-serif;
+}
+
+.nav li {
+  float: left;
+}
+
+.nav li a {
+  color: black;
+  text-decoration: none;
+}
+.nav li a:hover:not(.active) {
+  background-color: #111;
+  color: white;
+}
+
+img{
+  max-width: 100%;
+  max-height: 100%;
+  display: block; /* remove extra space below image */
+}
+
+.about p, a{
+ padding: 15px; /*Adds padding around the about me content*/
+ color: black;
+}
+
+.about a:hover{
+font-size: 30px;
+}
+.about_header{
+ text-align: center;
+}
+
+.header_img{
+  padding: 20px;
+}
+.grid_container{
+  display: grid;
+  grid-template-columns: 100%;
+}
+
+
+/*For tabs and desktop screens*/
+@media only screen and (min-width: 768px) {
+  .nav li {
+    float: right;
+  }
+  .grid_container{
+    display: grid;
+    grid-template-columns: 70% 30%;
+  }
+  .logo{
+    float: left;
+  }
+}
+
+/* Responsive css grid that without media queries */
+/* https://archive.hankchizljaw.com/wrote/create-a-responsive-grid-layout-with-no-media-queries-using-css-grid/ */
+
+/*
+  AUTO GRID
+  Set the minimum item size with `--auto-grid-min-size` and you'll
+  get a fully responsive grid with no media queries.
+*/
+.auto-grid {
+  --auto-grid-min-size: 16rem;
+}
+
+/* For support of older browsers*/
+.auto-grid > * {
+  max-width: 400px;
+}
+/* For support of older browsers*/
+.auto-grid > * + * {
+  margin-top: 1rem;
+}
+
+/* For support of older browsers*/
+@supports(display: grid) {
+  .auto-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+    grid-gap: 1rem;
+  }
+  
+  .auto-grid > * {
+    max-width: unset;
+  }
+
+  .auto-grid > * + * {
+    margin-top: unset;
+  }
+}
+
+/*
+  Container
+  A utility with a max width that contains child elements and horizontal centers them
+*/
+.container {
+  max-width: 65rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+

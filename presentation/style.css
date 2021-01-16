@@ -1,0 +1,105 @@
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+  
+header {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    background-color: white;
+}
+.logo {
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+}
+.inspiration_title{
+    background-color: black;
+    padding:5px;
+    text-align: center;
+    color: white;
+  }
+.about_header{
+    text-align: center;
+   }
+.about p, a{
+    padding: 15px; /*Adds padding around the about me content*/
+    color: black;
+   }
+   
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.nav{
+    list-style-type:none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.nav li {
+    float: right;
+  }
+
+.nav li a {
+    color: black;
+    padding: 22px 22px;
+    text-decoration: none;
+  }
+
+  .nav li a:hover:not(.active) {
+    background-color: #111;
+    color: white;
+  }
+
+/* Custom responsive layout */
+* {
+    box-sizing: border-box; 
+  }
+  
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+    float: left;
+    padding: 5px;
+  }
+  .row::after {
+    content: "";
+    clear: both; /*Remove floating elements around row element*/
+    display: table; 
+  }
+  
+  @media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+  }
+  
+  @media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+    .logo {
+      text-align: unset;
+      padding-left: 15px;
+    }
+  }
