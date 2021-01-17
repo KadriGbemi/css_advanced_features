@@ -1,0 +1,35 @@
+    #displayCart {
+        display: none;
+        }
+
+    #displayCart:target {
+        display: block;
+    }
+    .overlay {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        background-color: #000202b6;
+        overflow: hidden;
+        width: 100vw;
+        height: 100vh;
+        transition: .5s ease;
+    }
+    .overlay_container{
+        padding: 20px;
+        float: right;
+        color: white;
+    }
+
+    .items {
+        color: white;
+        padding-top: 20px;
+        font-weight: bold;
+    }
+
+    @media only screen and (min-width: 768px) {
+        .overlay {
+         width: 30vw;
+        }
+      }
+      
